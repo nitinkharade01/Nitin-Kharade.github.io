@@ -31,13 +31,13 @@ $(document).ready(function(){
     });
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Coder","Data Science Intern", "Data Analyst", "Statistician", "Freelancer"],
+        strings: ["Devloper", "Junior Data Scientist", "Machine Learning Engineer","Deep Learning Engineer", "Data Analyst", "Mathematician", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
     var typed = new Typed(".typing-2", {
-        strings: ["Coder","Data Science Intern", "Data Analyst", "Statistician", "Freelancer"],
+        strings: ["Devloper", "Junior Data Scientist", "Machine Learning Engineer","Deep Learning Engineer", "Data Analyst", "Mathematician", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
