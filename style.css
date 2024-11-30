@@ -246,33 +246,59 @@ section .title::after{
     color: rgb(133, 40, 23);
     background: none;
 }
+
 /* services section styling */
+/* Ensure the serv-content supports horizontal scrolling */
 .services .serv-content {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 20px; /* Space between cards */
-    padding-bottom: 15px; /* Space below content for better scrolling */
+    display: flex;               /* Arrange cards in a horizontal row */
+    overflow-x: auto;            /* Enable horizontal scrolling */
+    scroll-behavior: smooth;     /* Smooth scrolling */
+    gap: 20px;                   /* Add spacing between cards */
+    padding: 20px 0;             /* Top and bottom padding */
 }
 
+/* Cards */
+.services .serv-content .card {
+    flex: 0 0 auto;              /* Prevent shrinking; keep width consistent */
+    width: 300px;                /* Define width for each card */
+    background: #222;            /* Card background color */
+    text-align: center;          /* Center align text */
+    border-radius: 6px;          /* Add rounded corners */
+    padding: 20px;               /* Add padding inside the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better design */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect on cards */
+.services .serv-content .card:hover {
+    transform: scale(1.05);      /* Slightly enlarge card on hover */
+    background: crimson;         /* Change background on hover */
+}
+
+/* Card Icons */
+.services .serv-content .card i {
+    font-size: 40px;             /* Adjust icon size */
+    color: crimson;              /* Default icon color */
+    margin-bottom: 10px;         /* Space below icon */
+    transition: color 0.3s ease;
+}
+
+.services .serv-content .card:hover i {
+    color: #fff;                 /* Change icon color on hover */
+}
+
+/* Optional scrollbar styling */
 .services .serv-content::-webkit-scrollbar {
-    height: 8px; /* Scrollbar height for horizontal scrolling */
+    height: 8px;                 /* Horizontal scrollbar height */
 }
 
 .services .serv-content::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #ddd;            /* Scrollbar track background */
 }
 
 .services .serv-content::-webkit-scrollbar-thumb {
-    background: #333;
-}
-
-.services .serv-content .card {
-    flex: 0 0 auto; /* Prevent shrinking and ensure cards are side-by-side */
-    width: 300px; /* Fixed width for consistent scrolling */
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
+    background: #444;            /* Scrollbar thumb color */
+    border-radius: 4px;          /* Rounded scrollbar thumb */
 }
 
 /* skills section styling */
