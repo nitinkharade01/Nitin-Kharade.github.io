@@ -247,50 +247,34 @@ section .title::after{
     background: none;
 }
 /* services section styling */
-.services, .teams{
-    color:#fff;
-    background: #111;
+.services .serv-content {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Space between cards */
+    padding-bottom: 15px; /* Space below content for better scrolling */
 }
-.services .title::before,
-.teams .title::before{
-    background: #fff;
+
+.services .serv-content::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height for horizontal scrolling */
 }
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "what i provide";
+
+.services .serv-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
-.services .serv-content .card{
-    width: calc(33% - 20px);
+
+.services .serv-content::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+.services .serv-content .card {
+    flex: 0 0 auto; /* Prevent shrinking and ensure cards are side-by-side */
+    width: 300px; /* Fixed width for consistent scrolling */
     background: #222;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
-    background: crimson;
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
+
 /* skills section styling */
 .skills .title::after{
     content: "what i know";
